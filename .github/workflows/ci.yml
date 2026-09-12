@@ -1,0 +1,23 @@
+name: Weekend CI
+
+on:
+  push:
+
+jobs:
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Say Hello
+        run: echo "Hello from my CI pipeline"
+
+      - name: Check Runner
+        run: |
+          whoami
+          pwd
+
+      - name: Finish
+        run: echo "CI PASSED"
